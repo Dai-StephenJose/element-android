@@ -31,8 +31,8 @@ import org.matrix.android.sdk.api.util.getApplicationInfoCompat
 import org.matrix.android.sdk.api.util.getPackageInfoCompat
 
 private const val A_PACKAGE_NAME = "org.matrix.sdk"
-private const val AN_APP_NAME = "Element"
-private const val A_NON_ASCII_APP_NAME = "Élement"
+private const val AN_APP_NAME = "PChat"
+private const val A_NON_ASCII_APP_NAME = "PChat"
 private const val AN_APP_VERSION = "1.5.1"
 private const val A_FLAVOUR = "GooglePlay"
 
