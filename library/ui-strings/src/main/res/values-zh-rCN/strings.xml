@@ -2416,7 +2416,7 @@
     <string name="ftue_auth_use_case_subtitle">我们会帮你建立连接</string>
     <string name="ftue_auth_use_case_title">你会与谁聊最多？</string>
     <string name="ftue_auth_carousel_workplace_body">${app_name}也非常适合工作场所。受到世界上最安全的组织信任。</string>
-    <string name="ftue_auth_carousel_control_body">选择保存你的对话的位置，给予你控制权和独立性。通过 Matrix 连接。</string>
+    <string name="ftue_auth_carousel_control_body">选择保存你的对话的位置，给予你控制权和独立性。通过 PChat 连接。</string>
     <string name="ftue_auth_carousel_secure_body">安全且独立的通信，为你提供和在家中面对面对话同样等级的隐私。</string>
     <string name="ftue_auth_carousel_encrypted_title">安全传送消息。</string>
     <string name="settings_troubleshoot_test_endpoint_registration_failed">向家服务器注册端点token失败：

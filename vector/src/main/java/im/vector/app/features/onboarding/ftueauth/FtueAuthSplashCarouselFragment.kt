@@ -72,13 +72,7 @@ class FtueAuthSplashCarouselFragment :
 
         carouselController.setData(carouselStateFactory.create())
 
-        val isAlreadyHaveAccountEnabled = vectorFeatures.isOnboardingAlreadyHaveAccountSplashEnabled()
-        views.loginSplashSubmit.apply {
-            setText(if (isAlreadyHaveAccountEnabled) CommonStrings.login_splash_create_account else CommonStrings.login_splash_submit)
-            debouncedClicks { splashSubmit(isAlreadyHaveAccountEnabled) }
-        }
         views.loginSplashAlreadyHaveAccount.apply {
-            isVisible = isAlreadyHaveAccountEnabled
             debouncedClicks { alreadyHaveAnAccount() }
         }
 
@@ -126,11 +120,6 @@ class FtueAuthSplashCarouselFragment :
             delay(CAROUSEL_ROTATION_DELAY_MS)
             setCurrentItem(currentItem.incrementByOneAndWrap(max = itemCount - 1), duration = CAROUSEL_TRANSITION_TIME_MS)
         }
-    }
-
-    private fun splashSubmit(isAlreadyHaveAccountEnabled: Boolean) {
-        val getStartedFlow = if (isAlreadyHaveAccountEnabled) OnboardingFlow.SignUp else OnboardingFlow.SignInSignUp
-        viewModel.handle(OnboardingAction.SplashAction.OnGetStarted(onboardingFlow = getStartedFlow))
     }
 
     private fun alreadyHaveAnAccount() {

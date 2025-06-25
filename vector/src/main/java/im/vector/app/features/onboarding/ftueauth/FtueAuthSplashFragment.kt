@@ -44,13 +44,7 @@ class FtueAuthSplashFragment :
     }
 
     private fun setupViews() {
-        val isAlreadyHaveAccountEnabled = vectorFeatures.isOnboardingAlreadyHaveAccountSplashEnabled()
-        views.loginSplashSubmit.apply {
-            setText(if (isAlreadyHaveAccountEnabled) CommonStrings.login_splash_create_account else CommonStrings.login_splash_submit)
-            debouncedClicks { splashSubmit(isAlreadyHaveAccountEnabled) }
-        }
         views.loginSplashAlreadyHaveAccount.apply {
-            isVisible = vectorFeatures.isOnboardingAlreadyHaveAccountSplashEnabled()
             debouncedClicks { alreadyHaveAnAccount() }
         }
 
@@ -61,11 +55,6 @@ class FtueAuthSplashFragment :
                     "Branch: ${buildMeta.gitBranchName} ${buildMeta.gitRevision}"
             views.loginSplashVersion.debouncedClicks { navigator.openDebug(requireContext()) }
         }
-    }
-
-    private fun splashSubmit(isAlreadyHaveAccountEnabled: Boolean) {
-        val getStartedFlow = if (isAlreadyHaveAccountEnabled) OnboardingFlow.SignUp else OnboardingFlow.SignInSignUp
-        viewModel.handle(OnboardingAction.SplashAction.OnGetStarted(onboardingFlow = getStartedFlow))
     }
 
     private fun alreadyHaveAnAccount() {
