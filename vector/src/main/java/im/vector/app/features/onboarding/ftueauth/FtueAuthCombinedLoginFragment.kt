@@ -63,7 +63,6 @@ class FtueAuthCombinedLoginFragment :
         views.loginInput.setOnFocusLostListener(viewLifecycleOwner) {
             viewModel.handle(OnboardingAction.UserNameEnteredAction.Login(views.loginInput.content()))
         }
-        views.loginForgotPassword.debouncedClicks { viewModel.handle(OnboardingAction.PostViewEvent(OnboardingViewEvents.OnForgetPasswordClicked)) }
     }
 
     private fun setupSubmitButton() {
