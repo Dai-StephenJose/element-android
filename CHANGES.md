@@ -3154,7 +3154,7 @@ Changes in Element 1.0.0 (2020-07-15)
 ===================================================
 
 Features ✨:
- - Re-branding: The app is now called Element. New name, new themes, new icons, etc. More details here: https://element.io/blog/welcome-to-element/ (#1691)
+ - Re-branding: The app is now called Element. New name, new themes, new icons, etc. More details here: https://www.zwyktech.cn/ (#1691)
 
 Bugfix 🐛:
  - Video calls are shown as a voice ones in the timeline (#1676)

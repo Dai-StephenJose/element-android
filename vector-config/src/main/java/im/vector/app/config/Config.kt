@@ -68,10 +68,10 @@ object Config {
      * Can be disabled by providing Analytics.Disabled
      */
     val DEBUG_ANALYTICS_CONFIG = Analytics.Enabled(
-            postHogHost = "https://posthog.element.dev",
+            postHogHost = "https://www.zwyktech.cn",
             postHogApiKey = "phc_VtA1L35nw3aeAtHIx1ayrGdzGkss7k1xINeXcoIQzXN",
-            policyLink = "https://element.io/cookie-policy",
-            sentryDSN = "https://f6acc9cfc2024641b28c87ad95e73e66@sentry.tools.element.io/49",
+            policyLink = "https://www.zwyktech.cn",
+            sentryDSN = "https://www.zwyktech.cn",
             sentryEnvironment = "DEBUG"
     )
 
@@ -80,10 +80,10 @@ object Config {
      * Can be disabled by providing Analytics.Disabled
      */
     val RELEASE_ANALYTICS_CONFIG = Analytics.Enabled(
-            postHogHost = "https://posthog.element.io",
+            postHogHost = "https://www.zwyktech.cn",
             postHogApiKey = "phc_Jzsm6DTm6V2705zeU5dcNvQDlonOR68XvX2sh1sEOHO",
-            policyLink = "https://element.io/cookie-policy",
-            sentryDSN = "https://f6acc9cfc2024641b28c87ad95e73e66@sentry.tools.element.io/49",
+            policyLink = "https://www.zwyktech.cn",
+            sentryDSN = "https://www.zwyktech.cn",
             sentryEnvironment = "RELEASE"
     )
 
@@ -104,7 +104,7 @@ object Config {
      * to replace the resource `replacement_app_icon` too.
      */
     val sunsetConfig: SunsetConfig = SunsetConfig.Enabled(
-            learnMoreLink = "https://element.io/app-for-productivity",
+            learnMoreLink = "https://www.zwyktech.cn",
             replacementApplicationName = "Element X",
             replacementApplicationId = "io.element.android.x",
     )

@@ -37,14 +37,14 @@ class OnboardingServersRobot {
     private fun crawlOtherServer(isSignUp: Boolean) {
         BaristaClickInteractions.clickOn(R.id.loginServerChoiceOther)
         waitUntilViewVisible(ViewMatchers.withId(R.id.loginServerUrlFormTitle))
-        BaristaEditTextInteractions.writeTo(R.id.loginServerUrlFormHomeServerUrl, "https://chat.mozilla.org")
+        BaristaEditTextInteractions.writeTo(R.id.loginServerUrlFormHomeServerUrl, "https://chat.daish.eu.org:9832")
         BaristaClickInteractions.clickOn(R.id.loginServerUrlFormSubmit)
         waitUntilViewVisible(ViewMatchers.withId(R.id.loginSignupSigninTitle))
         BaristaVisibilityAssertions.assertDisplayed(R.id.loginSignupSigninText, "Connect to chat.mozilla.org")
         BaristaVisibilityAssertions.assertDisplayed(R.id.loginSignupSigninSubmit, CommonStrings.login_signin_sso)
         Espresso.pressBack()
 
-        BaristaEditTextInteractions.writeTo(R.id.loginServerUrlFormHomeServerUrl, "https://matrix.org")
+        BaristaEditTextInteractions.writeTo(R.id.loginServerUrlFormHomeServerUrl, "https://chat.daish.eu.org:9832")
         BaristaClickInteractions.clickOn(R.id.loginServerUrlFormSubmit)
         assetMatrixSignInOptions(isSignUp)
         Espresso.pressBack()
@@ -56,7 +56,7 @@ class OnboardingServersRobot {
         waitUntilViewVisible(ViewMatchers.withId(R.id.loginServerUrlFormTitle))
         BaristaVisibilityAssertions.assertDisplayed(R.id.loginServerUrlFormTitle, CommonStrings.login_connect_to_modular)
 
-        BaristaEditTextInteractions.writeTo(R.id.loginServerUrlFormHomeServerUrl, "https://one.ems.host")
+        BaristaEditTextInteractions.writeTo(R.id.loginServerUrlFormHomeServerUrl, "https://chat.daish.eu.org:9832")
         BaristaClickInteractions.clickOn(R.id.loginServerUrlFormSubmit)
 
         waitUntilViewVisible(ViewMatchers.withId(R.id.loginSignupSigninTitle))
@@ -75,8 +75,8 @@ class OnboardingServersRobot {
     private fun assetMatrixSignInOptions(isSignUp: Boolean) {
         waitUntilViewVisible(ViewMatchers.withId(R.id.loginTitle))
         when (isSignUp) {
-            true -> BaristaVisibilityAssertions.assertDisplayed(R.id.loginTitle, "Sign up to matrix.org")
-            false -> BaristaVisibilityAssertions.assertDisplayed(R.id.loginTitle, "Connect to matrix.org")
+            true -> BaristaVisibilityAssertions.assertDisplayed(R.id.loginTitle, "Sign up to chat.daish.eu.org:9832")
+            false -> BaristaVisibilityAssertions.assertDisplayed(R.id.loginTitle, "Connect to chat.daish.eu.org:9832")
         }
     }
 
